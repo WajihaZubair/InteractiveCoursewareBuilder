@@ -1,0 +1,33 @@
+InteractiveCoursewareBuilder/
+
+├── src/
+│   ├── components/
+│   │   ├── CurriculumComponent.java
+│   │   ├── Chapters.java
+│   │   ├── LessonText.java
+│   │   ├── QuizBlocks.java
+│   │   ├── Diagrams.java
+│   │   └── VideoLinks.java
+│
+│   ├── prototype/
+│   │   ├── CourseTemplate.java
+│
+│   ├── factories/
+│   │   ├── Exportfactory.java
+│   │   ├── HTMLfactory.java
+│   │   ├── PDFfactory.java
+│   │   └── EPUBfactory.java
+│
+│   ├── exporters/
+│   │   ├── Exporter.java
+│   │   ├── HTMLexporter.java
+│   │   ├── PDFexporter.java
+│   │   └── EPUBexporter.java
+│
+│   ├── flyweight/
+│   │   ├── SharedText.java
+│   │   └── FlyweightFactory.java
+│
+│   └── Main.java
+│
+└── README.md

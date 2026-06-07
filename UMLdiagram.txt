@@ -1,0 +1,6 @@
+                               CurriculumComponent
+                                       ^
+                                       |
+       ---------------------------------------------------------------
+       |             |           |          |                 |
+   LessonTexts   QuizBlocks   Diagrams   VideoLinks    Chapters (composite)
