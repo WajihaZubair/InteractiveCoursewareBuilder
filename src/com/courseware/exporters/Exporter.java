@@ -1,6 +1,8 @@
 package com.courseware.exporters;
 
-public interface Exporter {
-    void exports(String courseName);
-}
+import com.courseware.components.CurriculumComponent;
 
+public interface Exporter {
+    //It takes the curriculum structure
+    void exports(CurriculumComponent treeRoot);
+}

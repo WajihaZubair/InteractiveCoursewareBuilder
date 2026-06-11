@@ -1,6 +1,50 @@
-                               CurriculumComponent
-                                       ^
-                                       |
-       ---------------------------------------------------------------
-       |             |           |          |                 |
-   LessonTexts   QuizBlocks   Diagrams   VideoLinks    Chapters (composite)
+=============================================================================
+1. COMPOSITE PATTERN (Structure) & FLYWEIGHT PATTERN (Memory)
+=============================================================================
+                               
+                   <<interface>>
+                CurriculumComponent
+                        ^
+                        |
+       ---------------------------------------------------
+       |                |               |                |
+   LessonText        Diagram        VideoLink         Chapter (Composite)
+       ^                |               |                <>
+       |                -----------------                | *
+   QuizBlock                                             v
+                                                CurriculumComponent
+       
+                                                         |
+                                                         | (uses)
+                                                         v
+  FlyweightFactory  ---------------------------->   SharedText
+  (Manages Pool)       (Returns shared ref)     (Immutable Policy/Rules)
+
+
+=============================================================================
+2. ABSTRACT FACTORY PATTERN (Exporters)
+=============================================================================
+
+      <<interface>>                          <<interface>>
+      Exportfactory   -------------------->    Exporter
+            ^            (creates)                ^
+            |                                     |
+   -------------------                   -------------------
+   |        |        |                   |        |        |
+ HTML      PDF      EPUB               HTML      PDF      EPUB
+factory  factory  factory            exporter  exporter  exporter
+
+
+=============================================================================
+3. PROTOTYPE PATTERN (Cloning)
+=============================================================================
+
+                   <<interface>>
+                     Cloneable
+                        ^
+                        |
+                  CourseTemplate
+                        <>
+                        | *
+                        v
+                     Chapter
